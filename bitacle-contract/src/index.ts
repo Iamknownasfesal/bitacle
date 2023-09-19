@@ -1,7 +1,7 @@
 // Made for the Internet Computer and Dacade Course
 // A AggregatorV3Interface(which is ChainLink) like contract.
-// This contract is used to get the BTC -> ICP currency exchange rate.
-// The contract is deployed on the IC and the BTC -> ICP exchange rate is updated every 10 minutes.
+// This contract is used to get the 1 ICP -> BTC currency exchange rate.
+// The contract is deployed on the IC and the ICP -> BTC exchange rate is updated every 10 minutes.
 
 import {
   $query,
