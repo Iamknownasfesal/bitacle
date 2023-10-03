@@ -1686,7 +1686,7 @@ export interface DeveloperData {
     pull_request_contributors: number;
     code_additions_deletions_4_weeks: CodeAdditionsDeletions4Weeks;
     commit_count_4_weeks: number;
-    last_4_weeks_commit_activity_series: number[];
+    last_4_weeks_commit_activity_series: any[];
 }
 
 export interface CodeAdditionsDeletions4Weeks {
