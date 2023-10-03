@@ -21,7 +21,7 @@ The contract is deployed on the IC and the ICP -&gt; BTC exchange rate is update
 
 1. Clone the repository:
 
-   \`git clone [https://github.com/iamknownasfesal/bitacle](https://github.com/Iamknownasfesal/bitacle).git\`
+   `git clone [https://github.com/iamknownasfesal/bitacle](https://github.com/Iamknownasfesal/bitacle).git`
 
 2. Install dependencies:
 
