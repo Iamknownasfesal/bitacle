@@ -21,46 +21,46 @@ The contract is deployed on the IC and the ICP -&gt; BTC exchange rate is update
 
 1. Clone the repository:
 
-   git clone [https://github.com/iamknownasfesal/bitacle](https://github.com/Iamknownasfesal/bitacle).git
+   \`git clone [https://github.com/iamknownasfesal/bitacle](https://github.com/Iamknownasfesal/bitacle).git\`
 
 2. Install dependencies:
 
+   ```
    cd bitacle-contract
-
-   npm install\
-   \
-   cd bitacle-service\
-   \
    npm install
+   cd bitacle-service
+   npm install
+   ```
 
 ## **Testing**
 
 1. Start the Internet Computer emulator:
 
-   dfx start --clean --background
+   \`dfx start --clean --background\`
 
 2. Deploy the canisters:
 
+   ```
    cd bitacle-contract
-
    dfx deploy
+   ```
 
    click the link on the terminal, should look like this:\
    \`bitacle: h[ttp://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai](http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai)\`
 
 3. Create a .env file in bitacle-service like .env.example:
 
+   ```
    cd bitacle-service
-
    touch test
-
    vim test
+   ```
 
    get your canister id from the given link, it should be on top, and create your .env based on .env.example
 
 4. Run the service:
 
-   npm run start
+   `npm run start`
 
 5. There you go!
 
