@@ -44,7 +44,7 @@ This contract is used to get the 1 ICP -&gt; BTC currency exchange rate.
    ```
 
    click the link on the terminal, should look like this:\
-   \`bitacle: h[ttp://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai](http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai)\`
+   `bitacle: h[ttp://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai](http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai)`
 
 3. Create a .env file in bitacle-service like .env.example:
 
