@@ -34,7 +34,7 @@ This contract is used to get the 1 ICP -&gt; BTC currency exchange rate.
 
 1. Start the Internet Computer emulator:
 
-   \`dfx start --clean --background\`
+   `dfx start --clean --background`
 
 2. Deploy the canisters:
 
