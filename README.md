@@ -23,7 +23,7 @@ This contract is used to get the 1 ICP -&gt; BTC currency exchange rate.
 
 2. Install dependencies:
 
-   DO NOT USE **"npm install"** or **"pnpm i"**, ONLY USE **YARN**.
+   DO NOT USE **"npm install"** or **"pnpm i"**, ONLY USE "**yarn**".
 
    ```
    cd bitacle-contract
