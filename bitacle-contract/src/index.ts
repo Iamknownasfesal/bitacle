@@ -22,16 +22,18 @@ type Round = Record<{
   updatedAt: nat64;
 }>;
 
-type RoundPayload = Record<{
-  value: string;
-}>;
-
 let roundStorage = new StableBTreeMap<string, Round>(0, 44, 1024);
 let latestRound: string = "";
 
 $query;
-export function getLatestRound(): Result<Opt<Round>, string> {
-  return Result.Ok(roundStorage.get(latestRound));
+export function getLatestRound(): Result<Round, string> {
+  return match(roundStorage.get(latestRound), {
+    Some: (round) => Result.Ok<Round, string>(round),
+    None: () =>
+      Result.Err<Round, string>(
+        `Latest round not found. Please try again later.`
+      ),
+  });
 }
 
 $query;
@@ -43,11 +45,15 @@ export function getRound(id: string): Result<Round, string> {
 }
 
 $update;
-export function addRound(payload: RoundPayload): Result<Round, string> {
-  const round: Round = { roundId: uuidv4(), updatedAt: ic.time(), ...payload };
+export function addRound(payload: string): Round {
+  const round: Round = {
+    roundId: uuidv4(),
+    updatedAt: ic.time(),
+    value: payload,
+  };
   roundStorage.insert(round.roundId, round);
   latestRound = round.roundId;
-  return Result.Ok(round);
+  return round;
 }
 
 globalThis.crypto = {

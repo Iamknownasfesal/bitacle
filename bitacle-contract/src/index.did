@@ -1,9 +1,7 @@
 type Round = record { value : text; updatedAt : nat64; roundId : text };
-type RoundPayload = record { value : text };
 type _AzleResult = variant { Ok : Round; Err : text };
-type _AzleResult_1 = variant { Ok : opt Round; Err : text };
 service : () -> {
-  addRound : (RoundPayload) -> (_AzleResult);
-  getLatestRound : () -> (_AzleResult_1) query;
+  addRound : (text) -> (Round);
+  getLatestRound : () -> (_AzleResult) query;
   getRound : (text) -> (_AzleResult) query;
 }
