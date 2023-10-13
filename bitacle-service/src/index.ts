@@ -25,9 +25,7 @@ async function execute() {
         const data = await fetchData();
         const price = data.market_data.current_price.btc;
         let canister = local(process.env.CANISTER_ID); // Change this to ic for production(mainnet)
-        await canister.call("addRound", {
-            value: price.toString(10),
-        });
+        await canister.call("addRound", price.toString(10));
     } catch (e) {
         console.error(
             "Error fetching or processing data from CoinGecko\nOr Error while calling addRound function:\n",
