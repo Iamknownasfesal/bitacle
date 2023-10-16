@@ -12,8 +12,19 @@ This contract is used to get the 1 ICP -&gt; BTC currency exchange rate.
 
 ## **Prerequisites**
 
-- [Node.js](https://nodejs.org/en) (v16 or later)
+- [Node.js](https://nodejs.org/en) (v18)
 - [DFX](https://internetcomputer.org/docs/current/references/cli-reference/dfx-parent) (v0.14.0 or later)
+
+## **Setup**
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+nvm use 18
+DFX_VERSION=0.14.1 sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
+echo 'export PATH="$PATH:$HOME/bin"' >> "$HOME/.bashrc"
+```
+
+then reload your terminal.
 
 ## **Installation**
 
